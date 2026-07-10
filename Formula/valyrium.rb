@@ -43,6 +43,16 @@ class Valyrium < Formula
     end
   end
 
+  service do
+    run [opt_bin/"valyrium"]
+    run_type :immediate
+    keep_alive true
+    working_dir var
+    log_path var/"log/valyrium.log"
+    error_log_path var/"log/valyrium.log"
+    environment_variables PATH: "#{Dir.home}/.local/bin:#{std_service_path_env}"
+  end
+
   test do
     system "#{bin}/valyrium", "--version"
   end
