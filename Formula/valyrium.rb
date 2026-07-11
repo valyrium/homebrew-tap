@@ -4,21 +4,21 @@
 class Valyrium < Formula
   desc "OpenAI-compatible HTTP gateway that routes Chat Completions requests to Claude models via the Claude Code CLI, with MCP-relay tool calling"
   homepage "https://github.com/valyrium/valyrium"
-  version "1.0.0"
+  version "1.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/valyrium/valyrium/releases/download/v1.0.0/valyrium_1.0.0_darwin_amd64.tar.gz"
-      sha256 "cdcfa3a306985e54c696cbc46274fdbecf85f50a95b86993e705e051165b9658"
+      url "https://github.com/valyrium/valyrium/releases/download/v1.1.0/valyrium_1.1.0_darwin_amd64.tar.gz"
+      sha256 "cefeb8c08872a2b44d74d59af9c3ef246cce18eddd1b368594849b14f27c51e4"
 
       def install
         bin.install "valyrium"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/valyrium/valyrium/releases/download/v1.0.0/valyrium_1.0.0_darwin_arm64.tar.gz"
-      sha256 "415f3d6542dbd36d9907169c5133bba524d3f0779eab0ccc1bd6528983469f0b"
+      url "https://github.com/valyrium/valyrium/releases/download/v1.1.0/valyrium_1.1.0_darwin_arm64.tar.gz"
+      sha256 "04e16ebe9997777b69cbfcd623e7eb76d1d6ab3c4d209e456597ca98331d37eb"
 
       def install
         bin.install "valyrium"
@@ -28,15 +28,15 @@ class Valyrium < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/valyrium/valyrium/releases/download/v1.0.0/valyrium_1.0.0_linux_amd64.tar.gz"
-      sha256 "4a4d147f4a2377db7d18133c3360fa13fceba35c314848b60341389e935bec43"
+      url "https://github.com/valyrium/valyrium/releases/download/v1.1.0/valyrium_1.1.0_linux_amd64.tar.gz"
+      sha256 "cce6762c796164dbc963818e828811adbd037caa9c43d09310be712a16e328a6"
       def install
         bin.install "valyrium"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/valyrium/valyrium/releases/download/v1.0.0/valyrium_1.0.0_linux_arm64.tar.gz"
-      sha256 "2a49c643ff1705fb06cb3e7195bc07a227d6ade23f2d87504951e9677752f9e8"
+      url "https://github.com/valyrium/valyrium/releases/download/v1.1.0/valyrium_1.1.0_linux_arm64.tar.gz"
+      sha256 "40d6d00e49248aa1cf827fbe780aa3a849e54ed132b0e25c10ef02a91cb10bb9"
       def install
         bin.install "valyrium"
       end
